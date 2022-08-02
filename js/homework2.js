@@ -100,36 +100,36 @@ console.log(Math.trunc(sqrABC*1000)/1000);
 // В діапазоні годин 11-17 – має виводитися привітання “Доброго дня”
 // В діапазоні годин 17-23 – має виводитися привітання “Доброго вечора”.
 
-const datenow = new Date();
-let x = datenow.getHours();
+const dateCurr = new Date();
+let currHours = dateCurr.getHours();
 switch(true){
-   case x>=23 && x<6:
+   case currHours>=23 && currHours<6:
     console.log("Доброї ночі");
    break;
-   case x>=11 && x<18:
+   case currHours>=11 && currHours<18:
     console.log("Доброго дня");
    break;
-   case x>=5 && x<12:
+   case currHours>=5 && currHours<12:
     console.log("Доброго ранку");
    break;
    default:
     console.log("Доброго вечора");
    break;
 }
-console.log(x);
+console.log(currHours);
 
 // with if operator
 
-const datenow = new Date();
-let x = datenow.getHours();
-if (x>=23 && x<6){
+const dateNow = new Date();
+let currH = dateNow.getHours();
+if (currH>=23 && currH<6){
   console.log("Доброї ночі");
-} else if (x>=11 && x<18){
+} else if (currH>=11 && currH<18){
   console.log("Доброго дня");
-} else if (x>=5 && x<12){
+} else if (currH>=5 && currH<12){
   console.log("Доброго ранку");
 } else {
   console.log("Доброго вечора");
 }
 
-console.log(x);
+console.log(currH);
