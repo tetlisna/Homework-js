@@ -89,8 +89,12 @@ function showMonthName(month) {
   }
   return monthes[month - 1];
 }
-
-console.log(showMonthName(30));
+try {
+    console.log(showMonthName(month));
+    console.log(showMonthName(30));
+} catch(exception) {
+    alert(exception.message);
+}
 
 // 4. Реалізуйте функцію showUser(id), яка приймає параметром користувацьке id і повертає об’єкт, який містить значення переданої id. 
 // Також функція викидає помилку у разі якщо введено від’ємне id.Реалізуйте функцію showUsers(ids), яка приймає параметром масив користувацьких 
