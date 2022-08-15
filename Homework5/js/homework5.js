@@ -2,41 +2,41 @@
 
 // 1.Напишіть функцію propsCount(currentObject), яка приймає об’єкт і визначає кількість властивостей цього об’єкта.
 //Наприклад для об’єкта
-// let mentor = {
-//             course: "JS fundamental",
-//             duration: 3,
-//             direction: "web-development"
-//         };
-// function  propsCount(mentor) {
-//     return Object.keys(mentor).length;
-// }
+let mentor = {
+            course: "JS fundamental",
+            duration: 3,
+            direction: "web-development"
+        };
+function  propsCount(mentor) {
+    return Object.keys(mentor).length;
+}
 // or
-// function propsCount(mentor) {
-//     let sizeKeys = 0;
-//     for (i in mentor){
-//         sizeKeys++
-//     }
-//     return sizeKeys;
-// }
-// console.log(propsCount(mentor));  // 3
+function propsCount(mentor) {
+    let sizeKeys = 0;
+    for (i in mentor){
+        sizeKeys++
+    }
+    return sizeKeys;
+}
+console.log(propsCount(mentor));  // 3
 
 // 2. Створіть довільний об’єкт, який має 5 полів. Необхідно написати функцію showProps(obj), яка приймає даний об’єкт і виводить список
 // його властивостей записаних в масив. Виведіть також масив значень властивостей об’єкта.
-// const obj = {
-//     name: "Taras",
-//     surname: "Shevchenko",
-//     ukrainian: true,
-//     job: "artist",
-//     age:"internal"
-// }
-// function showProps(obj){
-//     return Object.keys(obj);
-// }
-// function showVal(obj){
-//     return Object.values(obj);
-// }
-// console.log(showProps(obj));
-// console.log(showVal(obj));
+const obj = {
+    name: "Taras",
+    surname: "Shevchenko",
+    ukrainian: true,
+    job: "artist",
+    age:"internal"
+}
+function showProps(obj){
+    return Object.keys(obj);
+}
+function showVal(obj){
+    return Object.values(obj);
+}
+console.log(showProps(obj));
+console.log(showVal(obj));
 
 // 3. Створіть клас Person, в якого конструктор приймає параметри name і surname, а також міститься метод showFullName(), який виводить ім’я і прізвище особи.
 // Від класу Person наслідується клас Student, конструктор якого крім name і surname, приймає параметр year (рік вступу до університету).
