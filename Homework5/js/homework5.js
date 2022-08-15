@@ -238,14 +238,15 @@ class Circle extends GeometricFigure{
 const geometricFigure = new GeometricFigure();
 const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
 
-function handleFigures(){
+function handleFigures(figures){
   let areas = figures.map(fig => {
+    if (!fig instanceof GeometricFigure) {
+      return 0;
+    }
     console.log(`Geometric figure: ${fig.toString()} - area: ${fig.getArea()}`);
-    area = {};
-    return area = fig.getArea();
+    return fig.getArea();
   }
   );
   return areas.reduce((total, item) => total+item);
 }
-
-console.log(handleFigures());
+console.log(handleFigures(figures));
