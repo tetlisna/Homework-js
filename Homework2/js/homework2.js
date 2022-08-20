@@ -81,10 +81,16 @@ let userB = +prompt("Enter a side B of a triangle", );
 let userC = +prompt("Enter a side C of a triangle", );
 if (Number(userA, userB, userC)){
 let p = 0.5*(userA + userB + userC);
-let sqrABC = Math.sqrt(p*(p - userA)*(p - userB)*(p - userC));
-console.log(Math.trunc(sqrABC*1000)/1000);
-} else {
+let sqrABC = Math.sqrt(p * (p - userA) * (p - userB) * (p - userC));
+console.log(Math.trunc(sqrABC*1000)/1000); // or sqrABC.toFixed(3);
+} else { 
   console.log("Incorrect data");
+}
+//checking wether the triangle is right-angled
+if ((a * a + b * b === c * c) || (c * c + b * b === a * a || a * a + c * c === b * b)){
+  console.log("the triangle is right-angled");
+} else {  
+  console.log("the triangle isn't right-angled");
 }
 
 // Task #7. Написати умовну конструкцію, яка в залежності від часу доби виводитиме відповідне привітання. Потрібно отримати реальний час доби із 
@@ -96,7 +102,7 @@ console.log(Math.trunc(sqrABC*1000)/1000);
 
 const dateCurr = new Date();
 let currHours = dateCurr.getHours();
-switch(true){
+switch(currHours){
    case currHours>=23 && currHours<6:
     console.log("Доброї ночі");
    break;

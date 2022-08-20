@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang =“en”>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Empty page</title>
+
+</head>
+
+    <body>
+
+    <script>
+        const mainElement = document.createElement('main');
+        document.body.append(mainElement);
+        mainElement.setAttribute('class', 'mainClass check item');
+        const nextElement = document.createElement('div');
+        nextElement.id = 'myDiv';
+        nextElement.innerHTML = '<p>First paragraph</p>';
+        mainElement.appendChild(nextElement); 
+    </script>
+    </body>
+
+</html>

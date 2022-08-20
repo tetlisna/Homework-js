@@ -1,0 +1,29 @@
+.green_bg {
+    background-color: rgb(0, 255, 0);
+}
+.bold {
+    font-weight: bold;
+}
+.red {
+    color:red;
+}
+.underline {
+    text-decoration: underline;
+}
+.italic{
+    font-style:italic;
+}
+.invisible{
+   /* color: rgba(0, 0, 0, 0); */
+   visibility: hidden;
+}
+.style{
+    display:inline;
+    list-style-type:none;
+}
+#myList {
+    font-size: 0;
+}
+#myList li{
+    font-size: 16px;
+}

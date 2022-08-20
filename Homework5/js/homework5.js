@@ -49,7 +49,8 @@ console.log(showVal(obj));
 
 class Person {
   constructor(surname, name) {
-    (this.surname = surname), (this.name = name);
+    this.surname = surname,
+    this.name = name
   }
   showFullName() {
     return this.name + " " + this.surname;
