@@ -19,12 +19,12 @@ setTimeout(() => {
 
 // 2. Для заданої HTML-сторінки:
 
-let textPar = document.querySelector("#text");
-const btn = document.querySelector("button");
-function changeCSS() {
-  textPar.classList.add("change");
+// let textPar = document.querySelector("#text");
+// const btn = document.querySelector("button");
+// function changeCSS() {
+//   textPar.classList.add("change");
   
-}
+// }
 
 // <p id ='text'>I learning JavaScript events!</p> 
 // <div>
