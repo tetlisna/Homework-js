@@ -1,9 +1,9 @@
 // Practical task
 // 1. На HTML-сторінці є елемент div:
-  // <body>	
-	// <div id="test">First</div>
-  // </body>	
-// Потрібно змінити вміст елемента із First на Last. Доступіться до елемента div хоча б 2 способами.	
+// <body>
+// <div id="test">First</div>
+// </body>
+// Потрібно змінити вміст елемента із First на Last. Доступіться до елемента div хоча б 2 способами.
 
 // const bodyEl = document.getElementById('test');
 // console.log(bodyEl);
@@ -15,14 +15,15 @@
 // let text2 = text1.innerHTML = "First";        //change back
 
 // 2. На сторінці є елемент зображення:
-    //  <body>
-		//    <img class="image" src="dog.jpg">
-    //  </body>
-    // let image = document.querySelector('.image');
-    // image.src = '/Homework6/img/cat.jpg';
-    // alert(image.baseURI) or     alert(image.contains)
+//  <body>
+//    <img class="image" src="dog.jpg">
+//  </body>
 
-    // alert(image.outerHTML)
+// let image = document.querySelector('.image');
+// image.src = '/Homework6/img/cat.jpg';
+// alert(image.baseURI) or     alert(image.contains)
+
+// alert(image.outerHTML)
 /* // Потрібно змінити зображення dog.jpg на cat.jpg.
 // Виведіть в модальному вікні вміст тегу img з новим зображенням.
 
@@ -41,10 +42,15 @@
 // Selector text 1: Second paragraph
 // Selector text 2: Third paragraph
 */
-let textNew = document.querySelectorAll('#text p').forEach((Element, key) => {  
-  console.log(Element.textContent = "Selector "+ key + ": "+ Element.textContent);
-  }
-)
+let textNew = document.querySelectorAll("#text p").forEach((Element, key) => {
+  console.log(
+    (Element.textContent = "Selector " + key + ": " + Element.textContent)
+  );
+});
+//or
+// for (let i = 0; i < textNew.length; i++) {
+//   alert("Selector" + i + ": " + textNew[i].innerHTML);
+// }
 
 // 4. На HTML-сторінці є ненумерований список з id="list", який складається із 5 елементів. У модальному вікні необхідно послідовно вивести вміст:
 // 	1) першого елемента списку
@@ -52,7 +58,7 @@ let textNew = document.querySelectorAll('#text p').forEach((Element, key) => {
 // 	3) другого елемента списку
 // 	4) четвертого елемента списку
 // 	5) третього елемента списку
-// Зробіть завдання 2 різними способами.	
+// Зробіть завдання 2 різними способами.
 // Приклад:
 // •	1
 // •	2
@@ -63,14 +69,12 @@ let textNew = document.querySelectorAll('#text p').forEach((Element, key) => {
 // let parent = document.querySelector('#list');
 // let countElement = parent.childElementCount;
 
-
 // let textElement= parent.textContent;
 // let firstChild = parent.firstElementChild;
 // let lastChild = parent.lastElementChild;
 // let nextChild = firstChild.nextElementSibling;
 // let fourthChild = parent.children[countElement - 2];
 // let thirdChild = parent.children[countElement - 1];
-
 
 // alert("1 " + firstChild.textContent + " 1")
 // alert("2 " + lastChild.textContent + " 5");
@@ -101,7 +105,7 @@ let textNew = document.querySelectorAll('#text p').forEach((Element, key) => {
 // while(textLi.length){
 //   if(orderOfList === "first"){
 //     orderOfList = "last";
-    
+
 //     alert(counter + " " + textLi.shift());
 //   } else {
 //     orderOfList = "first";
@@ -109,8 +113,6 @@ let textNew = document.querySelectorAll('#text p').forEach((Element, key) => {
 //   }
 //   counter++;
 // }
-
-
 
 // 5. Для сторінки
 // 		  <body>
@@ -129,36 +131,35 @@ let textNew = document.querySelectorAll('#text p').forEach((Element, key) => {
 //         <span>Make me invisible, please!</span>
 // 	    </body>
 // Напишіть скріпт, який за допомогою засобів DOM простилізує сторінку так як показано нижче:
- let title1 = document.querySelector('h1');
- title1.classList.add('green_bg');
-let paragraphs = document.querySelectorAll('#myDiv p');
-paragraphs.forEach((Element,key) => {
-  if(key === 0){
-    Element.classList.add('bold');
-  } else if(key === 1) {
-    Element.classList.add('red');
+let title1 = document.querySelector("h1");
+title1.classList.add("green_bg");
+let paragraphs = document.querySelectorAll("#myDiv p");
+paragraphs.forEach((Element, key) => {
+  if (key === 0) {
+    Element.classList.add("bold");
+  } else if (key === 1) {
+    Element.classList.add("red");
   } else if (key === 2) {
-    Element.classList.add('underline');
+    Element.classList.add("underline");
   } else if (key === 3) {
-    Element.classList.add('italic');
+    Element.classList.add("italic");
   }
-  console.log((Element.innerHTML));
-})
-let horizontal = document.querySelectorAll('#myList li');
-horizontal.forEach((Element)=>console.log((Element.classList.add('style'))));
-invisString = document.querySelector('span').classList.toggle('invisible');
-
+  console.log(Element.innerHTML);
+});
+let horizontal = document.querySelectorAll("#myList li");
+horizontal.forEach((Element) => console.log(Element.classList.add("style")));
+invisString = document.querySelector("span").classList.toggle("invisible");
 
 // 6. Задано HTML-сторінку:
 //     <body>
 // <input type="text" id="input1" value="Text1">
 // <input type="text" id="input2" value="Text2">
 //   </body>
-// 1)	Користувач почергово вводить 2 повідомлення (використати prompt()). 1-е повідомлення записується в 1-ий 
+// 1)	Користувач почергово вводить 2 повідомлення (використати prompt()). 1-е повідомлення записується в 1-ий
 // <input>, 2-ге – в 2-ий.
 // 2)	Поміняти значення 1-го і 2-го інпутів місцями.
-let user1 = document.querySelector('#input1');
-let user2 = document.querySelector('#input2');
+let user1 = document.querySelector("#input1");
+let user2 = document.querySelector("#input2");
 let user1Input = prompt("Enter text1");
 let user2Input = prompt("Enter text2");
 user1.value = user1Input;
@@ -172,20 +173,29 @@ user1.value = user2Input;
 user2.value = user1Input;
 
 // 7. Напишіть скріпт, який за допомогою засобів DOM створить для порожньої HTML-сторінки таку структуру з тегів і їх атрибутів.
-	 
+
 // 		<body>
-// 		  <main class="mainClass check item"> 	
+// 		  <main class="mainClass check item">
 // 		        <div id="myDiv">
-//            <p>First paragraph</p>           
+//            <p>First paragraph</p>
 //          </div>
-//        </main> 
-// 	    </body> 
+//        </main>
+// 	    </body>
 
-const mainElement = document.createElement('main');
+const mainElement = document.createElement("main");
 document.body.append(mainElement);
-mainElement.setAttribute('class', 'mainClass check item');
-const nextElement = document.createElement('div');
-nextElement.id = 'myDiv';
-nextElement.innerHTML = '<p>First paragraph</p>';
-mainElement.appendChild(nextElement); 
+mainElement.setAttribute("class", "mainClass check item");
+const nextElement = document.createElement("div");
+nextElement.id = "myDiv";
+nextElement.innerHTML = "<p>First paragraph</p>";
+mainElement.appendChild(nextElement);
 
+//or
+// const x = 100;
+// document.body.innerHTML = `
+//   <main class="mainClass check item">
+//     <div id="myDiv">${x}
+//     <p>First paragraph</p>
+//     </div>
+//   </main>
+// `;
