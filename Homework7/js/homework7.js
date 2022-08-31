@@ -48,21 +48,13 @@ let container = document.querySelector("#container");
 });
 
 let btn2 = document.querySelector("#btn2");
-  btn2.addEventListener("dblclick", function () {
-    document.body.style.backgroundColor = "pink";
-});
+  btn2.addEventListener("dblclick", () => document.body.style.backgroundColor = "pink");
 let btn3 = document.querySelector("#btn3");
-  btn3.addEventListener("mousedown", function () {
-    document.body.style.backgroundColor = "brown";
-  btn3.addEventListener("mouseup", function () {
-    document.body.style.backgroundColor = "white";
-  });
-});
+  btn3.addEventListener("mousedown", () => document.body.style.backgroundColor = "brown");
+  btn3.addEventListener("mouseup", () => document.body.style.backgroundColor = "white");
 
 let link = document.querySelector("#btn4");
-  link.addEventListener("mouseover", function () {
-    document.body.style.backgroundColor = "yellow";
-});
+  link.addEventListener("mouseover", () => document.body.style.backgroundColor =  "yellow");
 
 // 4. Реалізуйте програму, яка по натисканню на кнопку видалятиме обраний елемент випадаючого списку. Можуть видалятися всі елементи в будь-якому порядку.
 let selectOpt = document.querySelector("#select");
@@ -82,9 +74,7 @@ let p1 = document.querySelector("#mouseon");
 let p2 = document.querySelector("#press");
 let p3 = document.querySelector("#mouseout");
 
-btnLive.onmouseover = function () {
-  p1.innerHTML = "Mouse on me!";
-};
+btnLive.onmouseover = () => p1.innerHTML = "Mouse on me!";
 
 btnLive.addEventListener("click", function () {
   p1.innerHTML = "I was pressed!";
@@ -124,7 +114,7 @@ const objectCountryCity = {
   ukr: ["Kyiv", "Lviv", "Kharkiv"],
   usa: ["New-York", "Orlando", "Los-Angeles"],
   ger: ["Berlin", "Dresden", "Munich"],
-};
+}
 
 let citiesList = document.querySelector("#cities");
 let countryList = document.querySelector("#country");

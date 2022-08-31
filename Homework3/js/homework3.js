@@ -102,14 +102,14 @@
 //   return true;
 // }
 
-// // console.log(findUnique([1, 2, 3, 5, 5])); // => false
+// console.log(findUnique([1, 2, 3, 5, 5])); // => false
 
-// // console.log(findUnique([1, 2, 3, 5, 3]));
+// console.log(findUnique([1, 2, 3, 5, 3]));
 
-// // function findUnique(arr){
-// // const setArr = new Set(arr);
-// // return setArr.size === arr.length;
-// //  }
+// function findUnique(arr){
+// const setArr = new Set(arr);
+// return setArr.size === arr.length;
+// }
 
 // //or
 // function findUnique(arr) {

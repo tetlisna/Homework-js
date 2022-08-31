@@ -132,16 +132,17 @@ class Worker {
     (this.fullName = fullName),
       (this.dayRate = dayRate),
       (this.workingDays = workingDays);
-    // this.#experience = 1.2
+    // workerList.push(this);
   }
   get experience() {
-    return this._experience;
+    return this.#experience;
   }
-  set experience(value) {
-    this._experience = value;
+  set experience(experience) {
+    this.#experience = experience;
   }
   showSalary() {
     return this.dayRate * this.workingDays;
+  //console.log(`${this.fullName}salary:${this.dayRate * this.workingDays}`);
   }
   showExp() {
     return this.dayRate * this.workingDays * this.#experience;
@@ -178,6 +179,10 @@ function salarySort(workers) {
         console.log(worker.fullName + ": " + worker.showSalaryWithExperience())
         return returnedWorker;
     });
+    //let sortedSalary = workersArray.sort((a,b)=>a.showSalaryWorker()-b.showSalaryWorker();})
+    // for(let i =0; i < sortedSalary.length; i++;{
+    //  console.log(sortedSalary[i].fullName + ": "sortedSalary[i].showSalaryWorker);
+    })
     return sortedWorkers;
 }
 
@@ -251,3 +256,12 @@ function handleFigures(figures){
   return areas.reduce((total, item) => total+item);
 }
 console.log(handleFigures(figures));
+//function handleFigures(figures){
+//   return figures.reduce((sum,figure)=>{
+//     if(figure instanceof GeometricFigure){
+//       console.log(`Geometric figure: ${figure.toString()} = area: ${figure.getArea}`)
+//       return sum + figure.getArea();
+//     }
+//     throw Error('Bad argument');
+//   },0);
+// }
