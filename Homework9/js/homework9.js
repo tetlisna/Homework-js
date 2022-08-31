@@ -37,16 +37,11 @@ function checked_cb() {
       
       $(this).prop("checked", false);
     });
-  
-    
-  
   }
 }
 
 $('allChecked').on("click", () => {
   $('input[type=checkbox]').prop('checked', false);
 })
-
-
 
 });
