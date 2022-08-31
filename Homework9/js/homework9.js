@@ -34,14 +34,9 @@ function checked_cb() {
   let allChecked = $("input:checked").length;
   if(allChecked > 3){
     $("input").each(() => {
-      
       $(this).prop("checked", false);
     });
   }
 }
-
-$('allChecked').on("click", () => {
-  $('input[type=checkbox]').prop('checked', false);
-})
 
 });
