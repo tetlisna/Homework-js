@@ -22,7 +22,7 @@
 // checkEmail("Qmail2@gmail.com");
 // true
 function checkEmail(email){
-  r = /^[A-Z]\w+@\w+\./g;
+  r = /^[A-Z]\w+@\w+\./g; // /\S+@\S+\.\S+{2,3}/
   if (r.test(email)) {
   return console.log(true);  
   } else {
@@ -42,7 +42,7 @@ console.log(matchString);
 // 	Приклад роботи:
 // Вхідний рядок    "Java Script"
 // Вихід    “Script, Java”
-let re = /([a-z]+)\s([a-z]+)/i;
+let re = /([a-z]+)\s([a-z]+)/i;// /(\w+)\s(\w+)/
 let string = "Java Script";
 let newStr = string.replace(re, "$2, $1");
 console.log(newStr);
@@ -69,7 +69,7 @@ validationCard();
 // •  В тілі емейла допустимі лишеі символи “_” і “-”. Але вони не можуть бути 1-им символом емейлу.
 //  •  Символ “-” не може повторюватися.
 function checkEmail(email){
-  reg0 = /^[^\s\W--]\w+[_-][A-Za-z0-9]+@\w+\.\w+/;
+  reg0 = /^[^\s\W--]\w+[_-][A-Za-z0-9]+@\w+\.\w+/; // /^[a-z0-9]+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3))+$/i
   if(reg0.test(email)){
     return console.log("Email is correct!");
   } else {
@@ -89,8 +89,8 @@ checkEmail('my_ma--il@gmail.com');
 // true 
 // 1.1, 3
 function checkLogin(login){
-  let re000 = /^[^\d]\w+(\.)[A-Za-z0-9]{2,7}/;
-  if(re000.test(login)){
+  let re000 = /^[^\d]\w+(\.)[A-Za-z0-9]{2,7}/; // /^[a-zA-Z]{1}[a-zA-Z0-9]\.]{1,9}$ /
+ if(re000.test(login)){
     console.log("true");
     return true;
   } else {
